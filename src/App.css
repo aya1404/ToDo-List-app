@@ -1,0 +1,101 @@
+*{
+  margin: 0;/* Reset margin to zero */
+  padding: 0;/* Reset padding to zero */
+  box-sizing: border-box;/* Include padding and border in the element's total width and height */
+}
+/* set global styles */
+body{
+  background-image: url('https://images.unsplash.com/photo-1563208277-d9bcfa07608f?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=900&ixid=MnwxfDB8MXxyYW5kb218MHx8dG9kb2xpc3R8fHx8fHwxNzA4Mjg0MzEz&ixlib=rb-4.0.3&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=1600');/* Beautiful background image */
+  background-attachment: fixed; /* Fixed background position */
+  background-size: cover; /* Cover the entire viewport */
+  background-position: center; /* Center-align the background image */
+}
+
+.App {
+  text-align: center;
+  
+}
+/* global style for buttons */
+button {
+  font-family: system-ui, sans-serif;
+  cursor: pointer;
+  padding: .1em .6em;
+  font-weight: bold;  
+  border: none;
+}
+/*adding css for the add Task button*/
+@keyframes example {
+  from{width: 70px;height: 70px;font-size: 40px;opacity: 50%;}
+  to{width: 90px;height: 90px;font-size: 60px;opacity: 80%;}
+}
+.add{
+  width: 70px;
+  height: 70px;
+  background-color: #E95A49;
+  border-radius: 70%;
+  margin: 20px;
+  margin-right: 50px;
+  animation-name: example;
+  animation-duration: 2s;
+  animation-delay: 2s;
+  animation-iteration-count: infinite;
+  font-size: 40px;
+  cursor: pointer;
+  opacity: 50%;
+  position: fixed;
+}
+
+.add:hover {
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+/*AddTask componenet*/
+.error-msg {
+	display: block;
+	color: #E95A49;
+  font-weight: bold;
+	padding: 10px;
+	margin-bottom: 10px;
+	text-align: center;
+  max-width:calc(400px * 0.58);
+}
+
+/* Task component */
+.task{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  min-height: 80px;
+  margin: 20px;
+  backdrop-filter: blur(90px);
+  border-radius: 10px;
+  box-shadow: 0 0.5px 0 1px rgba(255, 255, 255, 0.23) inset, 0 1px 0 0 rgba(255, 255, 255, 0.66) inset, 0 4px 16px rgba(0, 0, 0, 0.12);
+}
+.taskTitle{
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: 20px;
+  width: 950px;
+  text-align: start;
+}
+.fa-pen{
+
+  margin-right: 20px;
+}
+.buttonTask {
+  background-color: #E95A49 ;/* the color*/
+  color: #fff;
+  border-radius: 10px;
+  margin-right: 30px;
+  padding:5px 15px;
+}
+/* .buttonTask:focus {
+  background-color: green;
+  color: #fff;
+  
+} */
+
+/* Header component */
+.header{
+  display: flex;
+
+}
